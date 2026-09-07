@@ -4,7 +4,7 @@
 > **你的会话可以很嗨，但孙哥绝不让一个 token 花在无用功上。**
 
 <p align="center">
-  <img src="assets/images/sunge.webp" alt="孙哥 · sunge" width="720">
+  <img src="assets/images/sunge.png" alt="孙哥 · sunge" width="720">
 </p>
 
 ## 这是什么
