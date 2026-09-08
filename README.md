@@ -71,11 +71,22 @@
 
 ```
 sunge/
-├── SKILL.md                 # 技能本体(守则 + 审计流程 + 金句 + 红线)
+├── SKILL.md                 # 技能本体(守则 + 审计 + 红线 + 省 token 军火库 + 工具调用法)
 ├── README.md                # 本说明
+├── scripts/
+│   └── squeeze.py           # 配套工具: 文本压缩 / token 计数 / 代码 AST 骨架化(零依赖)
 └── assets/
     └── images/
         └── sunge.png        # 技能配图/logo
+```
+
+`SKILL.md` 不只是口号，还带一套**能落地、能调用的省 token 军火库**：滑动窗口+历史摘要、删客套词、AST 骨架化、Lost-in-the-Middle 锚点首尾、max_tokens/stop 收口、省码阶梯、token 纪律工作模式——每一条都从真实会话里磨出来，落成了机械指令。其中能确定性执行的部分做成了 `scripts/squeeze.py`（文本压缩规则 + 自研代码骨架化，Python 3.10+，无第三方硬依赖；装 tiktoken 则 token 计数更准）：
+
+```bash
+python scripts/squeeze.py "请写一个函数返回数组之和"        # 压缩 + 省量
+python scripts/squeeze.py --explain "Could you please ..."  # 逐规则解释
+python scripts/squeeze.py --count <文本>                    # 数 token
+python scripts/squeeze.py --skeleton app.py                 # 代码骨架化
 ```
 
 ## 安装 / 使所有项目可用
